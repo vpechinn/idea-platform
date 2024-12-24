@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 import styles from './styles.module.scss';
+import {Button} from '@mui/material';
 
 interface FilterProps {
     onFilterChange: (transfers: number[]) => void;
@@ -36,19 +37,20 @@ const Filter: React.FC<FilterProps> = ({ onFilterChange, onSortByPrice, onCurren
 
     return (
             <div className={styles.filter}>
-                <div>
-                    <button onClick={() => handleCurrencyChange('RUB')}
+                <div className={styles.filter_title}>Валюта</div>
+                <div className={styles.filter_buttons}>
+                    <Button variant={selectedCurrency === 'RUB' ? 'contained' : 'outlined'} onClick={() => handleCurrencyChange('RUB')}
                             className={selectedCurrency === 'RUB' ? 'active' : ''}>RUB
-                    </button>
-                    <button onClick={() => handleCurrencyChange('USD')}
+                    </Button>
+                    <Button variant={selectedCurrency === 'USD' ? 'contained' : 'outlined' } onClick={() => handleCurrencyChange('USD')}
                             className={selectedCurrency === 'USD' ? 'active' : ''}>USD
-                    </button>
-                    <button onClick={() => handleCurrencyChange('EUR')}
+                    </Button>
+                    <Button variant={selectedCurrency === 'EUR' ? 'contained' : 'outlined'} onClick={() => handleCurrencyChange('EUR')}
                             className={selectedCurrency === 'EUR' ? 'active' : ''}>EUR
-                    </button>
+                    </Button>
                 </div>
-
-                <div>
+                <div className={styles.filter_subtitle}>Количество пересадок</div>
+                <div className={styles.filter_checkbox}>
                     <label>
                         <input
                             type="checkbox"
@@ -96,7 +98,7 @@ const Filter: React.FC<FilterProps> = ({ onFilterChange, onSortByPrice, onCurren
                     </label>
                 </div>
 
-                <button onClick={onSortByPrice}>Сортировать по цене</button>
+                <Button variant="text" onClick={onSortByPrice}>Сортировать по цене</Button>
             </div>
     );
 };

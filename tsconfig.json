@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "strict": true,
+    "jsx": "react-jsx",
+    "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true,
+    "lib": ["dom", "esnext"],
+    "types": ["react", "react-dom"]
+  },
+  "include": [
+    "src/**/*",
+    "./declarations.d.ts"  // Добавьте этот файл в "include", если его нет
+  ]
+}

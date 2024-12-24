@@ -10,21 +10,21 @@
     "id": 2,
     "price": 100,
     "transfers": 0,
-    "departure": "2024-12-23T09:00",
-    "arrival": "2024-12-23T12:00"
+    "departure": "2024-12-21T09:00",
+    "arrival": "2024-12-27T12:00"
   },
   {
     "id": 3,
     "price": 200,
     "transfers": 2,
-    "departure": "2024-12-23T12:00",
-    "arrival": "2024-12-23T18:00"
+    "departure": "2024-12-12T12:00",
+    "arrival": "2024-12-13T18:00"
   },
   {
     "id": 4,
     "price": 130,
     "transfers": 1,
     "departure": "2024-12-23T11:00",
-    "arrival": "2024-12-23T15:00"
+    "arrival": "2024-12-24T15:00"
   }
 ]
